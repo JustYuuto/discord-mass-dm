@@ -11,3 +11,7 @@
 * Run ``node index.js``
 * Wait for the script to fetch all the users
 * When the script fetched all the users, type "y" to start dm-ing all the users
+
+## Todo
+* [ ] Handle rate limits
+* [ ] Skip certain users based on a list of IDs
