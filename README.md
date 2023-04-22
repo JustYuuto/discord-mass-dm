@@ -10,6 +10,7 @@
   * ``message``: the message to send
 * Run ``node index.js``
 * Wait for the script to fetch all the users
+  > depending on the number of members in the server, the fetch time may be longer or shorter
 * When the script fetched all the users, type "y" to start dm-ing all the users
 
 ## Todo
