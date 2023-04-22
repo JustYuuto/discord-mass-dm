@@ -14,5 +14,5 @@
 * When the script fetched all the users, type "y" to start dm-ing all the users
 
 ## Todo
-* [ ] Handle rate limits
+* [x] Handle rate limits
 * [ ] Skip certain users based on a list of IDs

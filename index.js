@@ -42,10 +42,12 @@ client.on('ready', async () => {
               .then(() => {
                 console.log(`Successfully DM-ed ${chalk.bold(member[1].user.tag)} (${percentage(i, users)}%)`);
               })
-              .catch(() => {
-                console.log(`Cannot DM ${chalk.bold(member[1].user.tag)}! (${percentage(i, users)}%)`)
+              .catch(async (e) => {
+                console.log(`Cannot DM ${chalk.bold(member[1].user.tag)} - ${e.message} (${percentage(i, users)}%)`);
+                if (e.httpStatus === 429) { // Rate-limited
+                  await client.sleep(1000);
+                }
               });
-            await client.sleep(1000);
           }
         }
         console.log(`Finished DM-ing ${users} users! Exiting...`);
