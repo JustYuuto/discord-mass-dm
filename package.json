@@ -1,0 +1,18 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "chalk": "4.1.2",
+    "discord.js-selfbot-v13": "^2.13.4",
+    "inquirer": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.15.13",
+    "discord-api-types": "^0.37.39",
+    "eslint": "^8.38.0",
+    "nodemon": "^2.0.22"
+  }
+}
