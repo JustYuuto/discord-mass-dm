@@ -8,3 +8,6 @@
   * ``guildId``: the guild id of the ``channelId`` 
   * ``channelId``: a channel which contains the members you want to DM (the members list will be used)
   * ``message``: the message to send
+* Run ``node index.js``
+* Wait for the script to fetch all the users
+* When the script fetched all the users, type "y" to start dm-ing all the users
