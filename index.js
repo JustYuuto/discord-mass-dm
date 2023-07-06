@@ -37,10 +37,10 @@ client.on('ready', async () => {
       const choice = answers['start_dming'];
 
       if (choice === true) {
-        let i = 0;
+        let i = 1;
         for (const member of guild.members.cache) {
-          i++;
-          if (member[1].user.bot) console.log(`Skipping ${chalk.bold(member[1].user.tag)} as is it a bot (${percentage(i, users)}%)`);
+          await client.sleep(500);
+          if (member[1].user.bot) console.log(`Skipping ${chalk.bold(member[1].user.tag)} as is it a bot (${percentage(i, guild.members.cache.size)}%)`);
           else {
             await client.users.cache.get(member[0])?.send(message)
               .then(() => {
