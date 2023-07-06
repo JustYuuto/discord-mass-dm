@@ -5,7 +5,7 @@ const chalk = require('chalk');
 const percentage = (partialValue, totalValue) => parseFloat((100 * partialValue) / totalValue).toPrecision(3);
 
 const client = new Client({
-  checkUpdate: false
+  checkUpdate: true
 });
 
 client.on('ready', async () => {
