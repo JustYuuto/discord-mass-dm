@@ -149,10 +149,15 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@^18.15.13":
+"@types/node@*":
   version "18.15.13"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.13.tgz#f64277c341150c979e42b00e4ac289290c9df469"
   integrity sha512-N+0kuo9KgrUQ1Sn/ifDXsvg0TTleP7rIy4zOBGECxAljqvqfqpTfzx0Q1NUedOixRMBfe2Whhb056a42cWs26Q==
+
+"@types/node@^20.4.0":
+  version "20.4.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.0.tgz#01d637d1891e419bc85763b46f42809cd2d5addb"
+  integrity sha512-jfT7iTf/4kOQ9S7CHV9BIyRaQqHu67mOjsIQBC3BKZvzvUB6zLxEwJ6sBE3ozcvP8kF6Uk5PXN0Q+c0dfhGX0g==
 
 "@types/through@*":
   version "0.0.30"
@@ -410,15 +415,20 @@ delayed-stream@~1.0.0:
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==
 
-discord-api-types@^0.37.37, discord-api-types@^0.37.39:
+discord-api-types@^0.37.37:
   version "0.37.39"
   resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.37.39.tgz#4b103bad3a1547b2106d8e65750ddb0374f9bb6a"
   integrity sha512-hkhQsQyzsTJITp311WXvHZh9j4RAMfIk2hPmsWeOTN50QTpg6zqmJNfel9D/8lYNvsU01wzw9281Yke8NhYyHg==
 
-discord.js-selfbot-v13@^2.13.4:
-  version "2.13.4"
-  resolved "https://registry.yarnpkg.com/discord.js-selfbot-v13/-/discord.js-selfbot-v13-2.13.4.tgz#4aee4b22692dfba58f5be404dadccdc63ff1891a"
-  integrity sha512-K0FyEbPzoMGBQb+uVSLAG/ciVcpXjPcNeZvTJR7waaHoNMN4gzlVuOxiSbrWH7bOQdICUpeu4N0shySbGRQr4w==
+discord-api-types@^0.37.40, discord-api-types@^0.37.47:
+  version "0.37.47"
+  resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.37.47.tgz#d622d5f5629a71ca2cd534442ae2800844e1888d"
+  integrity sha512-rNif8IAv6duS2z47BMXq/V9kkrLfkAoiwpFY3sLxxbyKprk065zqf3HLTg4bEoxRSmi+Lhc7yqGDrG8C3j8GFA==
+
+discord.js-selfbot-v13@^2.14.6:
+  version "2.14.6"
+  resolved "https://registry.yarnpkg.com/discord.js-selfbot-v13/-/discord.js-selfbot-v13-2.14.6.tgz#58c5787eab07e21896b4ad06374c5ed1ab042c35"
+  integrity sha512-2dILD1ju4eXM2P79FepQnghqCEbS6h9+m6f1xPfVPew2GpWRkWrgfJ3Dd+46xx5/TpkqU+RhfEDZOrgTaRKOUQ==
   dependencies:
     "@aikochan2k6/qrcode-terminal" "^0.12.1"
     "@discordjs/builders" "^1.6.1"
@@ -430,16 +440,16 @@ discord.js-selfbot-v13@^2.13.4:
     "@types/ws" "^8.5.4"
     axios "1.1"
     chalk "^4.1.2"
-    discord-api-types "^0.37.37"
+    discord-api-types "^0.37.40"
+    fetch-cookie "^2.1.0"
     form-data "^4.0.0"
     json-bigint "^1.0.0"
     lodash.permutations "^1.0.0"
-    murmurhash "^2.0.1"
     node-fetch "^2.6.9"
     safe-base64 "^2.0.1-0"
-    set-cookie-parser "^2.6.0"
     string-similarity "^4.0.4"
     string_decoder "^1.3.0"
+    tough-cookie "^4.1.2"
     ws "^8.13.0"
 
 doctrine@^3.0.0:
@@ -586,6 +596,14 @@ fastq@^1.6.0:
   integrity sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==
   dependencies:
     reusify "^1.0.4"
+
+fetch-cookie@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/fetch-cookie/-/fetch-cookie-2.1.0.tgz#6e127909912f9e527533b045aab555c06b33801b"
+  integrity sha512-39+cZRbWfbibmj22R2Jy6dmTbAWC+oqun1f1FzQaNurkPDUP4C38jpeZbiXCR88RKRVDp8UcDrbFXkNhN+NjYg==
+  dependencies:
+    set-cookie-parser "^2.4.8"
+    tough-cookie "^4.0.0"
 
 figures@^3.0.0:
   version "3.2.0"
@@ -929,11 +947,6 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-murmurhash@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/murmurhash/-/murmurhash-2.0.1.tgz#4097720e08cf978872194ad84ea5be2dec9b610f"
-  integrity sha512-5vQEh3y+DG/lMPM0mCGPDnyV8chYg/g7rl6v3Gd8WMF9S429ox3Xk8qrk174kWhG767KQMqqxLD1WnGd77hiew==
-
 mute-stream@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
@@ -1081,15 +1094,25 @@ proxy-from-env@^1.1.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
+psl@^1.1.33:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/psl/-/psl-1.9.0.tgz#d0df2a137f00794565fcaf3b2c00cd09f8d5a5a7"
+  integrity sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==
+
 pstree.remy@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/pstree.remy/-/pstree.remy-1.1.8.tgz#c242224f4a67c21f686839bbdb4ac282b8373d3a"
   integrity sha512-77DZwxQmxKnu3aR542U+X8FypNzbfJ+C5XQDk3uWjWxn6151aIMGthWYRXTqT1E5oJvg+ljaa2OJi+VfvCOQ8w==
 
-punycode@^2.1.0:
+punycode@^2.1.0, punycode@^2.1.1:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.0.tgz#f67fa67c94da8f4d0cfff981aee4118064199b8f"
   integrity sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==
+
+querystringify@^2.1.1:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
+  integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
@@ -1111,6 +1134,11 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+requires-port@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
+  integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
 
 resolve-from@^4.0.0:
   version "4.0.0"
@@ -1181,7 +1209,7 @@ semver@~7.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.0.0.tgz#5f3ca35761e47e05b206c6daff2cf814f0316b8e"
   integrity sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==
 
-set-cookie-parser@^2.6.0:
+set-cookie-parser@^2.4.8:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/set-cookie-parser/-/set-cookie-parser-2.6.0.tgz#131921e50f62ff1a66a461d7d62d7b21d5d15a51"
   integrity sha512-RVnVQxTXuerk653XfuliOxBP81Sf0+qfQE73LIYKcyMYHG94AuH0kgrQpRDuTZnSmjpysHmzxJXKNfa6PjFhyQ==
@@ -1288,6 +1316,16 @@ touch@^3.1.0:
   dependencies:
     nopt "~1.0.10"
 
+tough-cookie@^4.0.0, tough-cookie@^4.1.2:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-4.1.3.tgz#97b9adb0728b42280aa3d814b6b999b2ff0318bf"
+  integrity sha512-aX/y5pVRkfRnfmuX+OdbSdXvPe6ieKX/G2s7e98f4poJHnqH3281gDPm/metm6E/WRamfx7WC4HUqkWHfQHprw==
+  dependencies:
+    psl "^1.1.33"
+    punycode "^2.1.1"
+    universalify "^0.2.0"
+    url-parse "^1.5.3"
+
 tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
@@ -1325,12 +1363,25 @@ undefsafe@^2.0.5:
   resolved "https://registry.yarnpkg.com/undefsafe/-/undefsafe-2.0.5.tgz#38733b9327bdcd226db889fb723a6efd162e6e2c"
   integrity sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==
 
+universalify@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.2.0.tgz#6451760566fa857534745ab1dde952d1b1761be0"
+  integrity sha512-CJ1QgKmNg3CwvAv/kOFmtnEN05f0D/cn9QntgNOQlQF9dgvVTHj3t+8JPdjqawCHk7V/KA+fbUqzZ9XWhcqPUg==
+
 uri-js@^4.2.2:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.1.tgz#9b1a52595225859e55f669d928f88c6c57f2a77e"
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+url-parse@^1.5.3:
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
+  integrity sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==
+  dependencies:
+    querystringify "^2.1.1"
+    requires-port "^1.0.0"
 
 util-deprecate@^1.0.1:
   version "1.0.2"
