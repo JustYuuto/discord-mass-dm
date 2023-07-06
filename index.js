@@ -14,11 +14,15 @@ client.on('ready', async () => {
   await client.guilds.fetch();
 
   const guild = client.guilds.cache.get(guildId);
-  for (let index = 0; index <= guild.memberCount; index += 200) {
+  const memberCount = guild.memberCount;
+  console.log(`Fetching ${memberCount} members, this can take some time`);
+  for (let index = 0; index <= memberCount; index += 100) {
     await guild.members.fetchMemberList(channelId, index === 0 ? 100 : index, index !== 100).catch(() => {});
-    console.log(`Fetched ${index} members of ${guild.memberCount} members (${percentage(index, guild.memberCount)}%)`);
+    console.log(`Fetched ${index} members (${percentage(index, memberCount)}%)`);
     await client.sleep(500);
   }
+  console.log(`Fetched ${memberCount} members (100%)`);
+  console.log(guild.members.cache.size)
   if (guild.members.cache.get(client.user.id)) guild.members.cache.delete(client.user.id);
 
   const users = guild.members.cache.size;
@@ -40,15 +44,17 @@ client.on('ready', async () => {
           else {
             await client.users.cache.get(member[0])?.send(message)
               .then(() => {
-                console.log(`Successfully DM-ed ${chalk.bold(member[1].user.tag)} (${percentage(i, users)}%)`);
+                console.log(`Successfully DM-ed ${chalk.bold(member[1].user.tag)} (${percentage(i, guild.members.cache.size)}%)`);
               })
               .catch(async (e) => {
-                console.log(`Cannot DM ${chalk.bold(member[1].user.tag)} - ${e.message} (${percentage(i, users)}%)`);
+                console.log(`Cannot DM ${chalk.bold(member[1].user.tag)} - ${e.message} (${percentage(i, guild.members.cache.size)}%)`);
                 if (e.httpStatus === 429) { // Rate-limited
+                  console.log('Got rate-limited, waiting 1 second');
                   await client.sleep(1000);
                 }
               });
           }
+          i++;
         }
         console.log(`Finished DM-ing ${users} users! Exiting...`);
         process.exit(0);
